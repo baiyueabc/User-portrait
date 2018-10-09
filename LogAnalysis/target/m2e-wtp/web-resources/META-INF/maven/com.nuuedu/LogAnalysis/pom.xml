@@ -1,0 +1,73 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.nuuedu</groupId>
+  <artifactId>LogAnalysis</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>LogAnalysis</name>
+    <dependencies>
+  	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>5.1.6</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.apache.hadoop</groupId>
+	    <artifactId>hadoop-mapreduce-client-jobclient</artifactId>
+	    <version>2.7.3</version>
+	    <scope>test</scope>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>fastjson</artifactId>
+	    <version>1.2.47</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.kumkee</groupId>
+	    <artifactId>UserAgentParser</artifactId>
+	    <version>0.0.1</version>
+	</dependency>
+	
+  	<dependency>
+	    <groupId>org.projectlombok</groupId>
+	    <artifactId>lombok</artifactId>
+	    <version>1.16.18</version>
+	    <scope>provided</scope>
+	</dependency>
+  	<dependency>
+	    <groupId>org.apache.hadoop</groupId>
+	    <artifactId>hadoop-common</artifactId>
+	    <version>2.7.3</version>
+	</dependency>
+  	<dependency>
+	    <groupId>org.apache.hadoop</groupId>
+	    <artifactId>hadoop-client</artifactId>
+	    <version>2.7.3</version>
+	</dependency>
+  	<dependency>
+  		<groupId>jdk.tools</groupId>
+  		<artifactId>jdk.tools</artifactId>
+  		<version>1.8</version>
+  		<scope>system</scope>
+  		<systemPath>${JAVA_HOME}/lib/tools.jar</systemPath>
+  	</dependency>
+  </dependencies>
+  <build>
+  	<plugins>
+  		<plugin>
+  			<groupId>org.apache.tomcat.maven</groupId>
+  			<artifactId>tomcat7-maven-plugin</artifactId>
+  			<version>2.2</version>
+  			<configuration>
+  				<url>http://192.168.80.142/manager/text</url>
+  				<path>/</path>
+  				<username>tomcat</username>
+  				<password>123456</password>
+  			</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
+</project>
